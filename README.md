@@ -98,4 +98,4 @@ Push your changes and create a pull request.
 
 Contact
 
-For any issues or inquiries, please contact [Your Name or Email].
+For any issues or inquiries, please contact me somehow lol
