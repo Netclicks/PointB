@@ -1,0 +1,46 @@
+[gd_scene load_steps=18 format=3 uid="uid://bik7e70wrrhhb"]
+
+[ext_resource type="Script" path="res://scenery_manager.gd" id="1_4s2jt"]
+[ext_resource type="PackedScene" uid="uid://cjetiijwawvhr" path="res://scenes/rocks_1_node.tscn" id="2_td4ew"]
+[ext_resource type="PackedScene" uid="uid://b1yo8y5kvo5yy" path="res://scenes/rocks_2_node.tscn" id="3_yo4yr"]
+[ext_resource type="PackedScene" uid="uid://54oluq3uydg2" path="res://scenes/rock_1_node.tscn" id="4_qw4un"]
+[ext_resource type="PackedScene" uid="uid://cj7kma2ksy015" path="res://scenes/rock_2_node.tscn" id="5_cromv"]
+[ext_resource type="PackedScene" uid="uid://bmcputu3jsovu" path="res://scenes/solarpanel.tscn" id="6_4lx7k"]
+[ext_resource type="PackedScene" uid="uid://cydrbgaf62y1h" path="res://scenes/terrain_low.tscn" id="7_ac55d"]
+[ext_resource type="PackedScene" uid="uid://md60r21nm4w2" path="res://scenes/terrain_mining.tscn" id="8_p1can"]
+[ext_resource type="PackedScene" uid="uid://japjyeedeb48" path="res://scenes/windturbine_tall.tscn" id="9_d44i4"]
+[ext_resource type="PackedScene" uid="uid://l7jl8no5cuet" path="res://scenes/building_1_node.tscn" id="10_8ow4u"]
+[ext_resource type="PackedScene" uid="uid://bjr1m8uf41k03" path="res://scenes/building_2_node.tscn" id="11_omfkc"]
+[ext_resource type="PackedScene" uid="uid://ejiaufin3m8w" path="res://scenes/building_3_node.tscn" id="12_3ivg6"]
+[ext_resource type="PackedScene" uid="uid://5spw34qetbgr" path="res://scenes/building_4_node.tscn" id="13_e5ey0"]
+[ext_resource type="PackedScene" uid="uid://dbwegl7tgbc25" path="res://scenes/building_5_node.tscn" id="14_1j1ds"]
+[ext_resource type="PackedScene" uid="uid://bmxqgmbcus0h2" path="res://scenes/building_6_node.tscn" id="15_2tcws"]
+[ext_resource type="PackedScene" uid="uid://bnifkappjfuw4" path="res://scenes/building_7_node.tscn" id="16_j1r4t"]
+[ext_resource type="PackedScene" uid="uid://bje3umuhbjc5p" path="res://scenes/building_8_node.tscn" id="17_4jri5"]
+
+[node name="SceneryManager" type="Node3D"]
+script = ExtResource("1_4s2jt")
+rocks1 = ExtResource("2_td4ew")
+rocks2 = ExtResource("3_yo4yr")
+rock1 = ExtResource("4_qw4un")
+rock2 = ExtResource("5_cromv")
+solarpanel = ExtResource("6_4lx7k")
+terrain_low = ExtResource("7_ac55d")
+terrain_mining = ExtResource("8_p1can")
+windturbine = ExtResource("9_d44i4")
+building1 = ExtResource("10_8ow4u")
+building2 = ExtResource("11_omfkc")
+building3 = ExtResource("12_3ivg6")
+building4 = ExtResource("13_e5ey0")
+building5 = ExtResource("14_1j1ds")
+building6 = ExtResource("15_2tcws")
+building7 = ExtResource("16_j1r4t")
+building8 = ExtResource("17_4jri5")
+scenery_segments = 1
+scenery_ceiling = 25
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

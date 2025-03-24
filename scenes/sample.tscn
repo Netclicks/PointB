@@ -1,0 +1,55 @@
+[gd_scene load_steps=14 format=3 uid="uid://cnkmw63nj2yxw"]
+
+[ext_resource type="PackedScene" uid="uid://dvb4u560fgqpg" path="res://scenes/road_segment.tscn" id="1_dbmkl"]
+[ext_resource type="Script" path="res://scenes/sample.gd" id="1_hymcv"]
+[ext_resource type="PackedScene" uid="uid://c1kuvycngsn01" path="res://scenes/player.tscn" id="2_xijqh"]
+[ext_resource type="PackedScene" uid="uid://bpv8pv182ag0t" path="res://assets/gltf/trafficlight_A.gltf" id="3_jvii0"]
+[ext_resource type="PackedScene" uid="uid://l75726v4r7lj" path="res://assets/gltf/trafficlight_B.gltf" id="4_bm5ie"]
+[ext_resource type="PackedScene" uid="uid://l7jl8no5cuet" path="res://scenes/building_1_node.tscn" id="6_x2qbi"]
+[ext_resource type="PackedScene" uid="uid://c7ty0fm55mwnq" path="res://assets/gltf/car_sedan.gltf" id="7_r3ipx"]
+[ext_resource type="PackedScene" uid="uid://bjr1m8uf41k03" path="res://scenes/building_2_node.tscn" id="7_ttyjk"]
+[ext_resource type="PackedScene" uid="uid://bje3umuhbjc5p" path="res://scenes/building_8_node.tscn" id="8_6d3mr"]
+[ext_resource type="PackedScene" uid="uid://dbwegl7tgbc25" path="res://scenes/building_5_node.tscn" id="9_6mnv6"]
+[ext_resource type="PackedScene" uid="uid://bmxqgmbcus0h2" path="res://scenes/building_6_node.tscn" id="10_i3vbo"]
+[ext_resource type="PackedScene" uid="uid://cydrbgaf62y1h" path="res://scenes/terrain_low.tscn" id="11_l3wwo"]
+[ext_resource type="PackedScene" uid="uid://c2qmajhr6xqgp" path="res://scenes/world_environment.tscn" id="12_ux31o"]
+
+[node name="Sample" type="Node3D"]
+script = ExtResource("1_hymcv")
+
+[node name="RoadSegment" parent="." instance=ExtResource("1_dbmkl")]
+
+[node name="player" parent="." instance=ExtResource("2_xijqh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.738013, 0.2, 0)
+
+[node name="trafficlight_A2" parent="." instance=ExtResource("3_jvii0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.2, 0)
+
+[node name="trafficlight_B2" parent="." instance=ExtResource("4_bm5ie")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 0.2, 0)
+
+[node name="car_sedan2" parent="." instance=ExtResource("7_r3ipx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.555, 0.2, 0)
+
+[node name="Building1Node" parent="." instance=ExtResource("6_x2qbi")]
+transform = Transform3D(0.688355, 0, -0.725374, 0, 1, 0, 0.725374, 0, 0.688355, 2.93, 0, -1.494)
+
+[node name="Building2Node" parent="." instance=ExtResource("7_ttyjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.885, 0.2, -1.481)
+
+[node name="Building8Node" parent="." instance=ExtResource("8_6d3mr")]
+transform = Transform3D(0.654741, 0, 0.755853, 0, 1, 0, -0.755853, 0, 0.654741, -3.079, 0, -0.264)
+
+[node name="Building5Node" parent="." instance=ExtResource("9_6mnv6")]
+transform = Transform3D(0.919135, 0, 0.393942, 0, 1, 0, -0.393942, 0, 0.919135, -1.283, 0.2, -1.456)
+
+[node name="Building6Node" parent="." instance=ExtResource("10_i3vbo")]
+transform = Transform3D(0.346936, 0, -0.937889, 0, 1, 0, 0.937889, 0, 0.346936, 3.77539, 0, 0.55896)
+
+[node name="TerrainLow" parent="." instance=ExtResource("11_l3wwo")]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 0, 0)
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("12_ux31o")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 1.30534e-05, 0.635, 2.55)

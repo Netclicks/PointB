@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://m2rqh8y8fot7"]
+
+[ext_resource type="PackedScene" uid="uid://yp14kh1wbtds" path="res://assets/gltf/watertower.gltf" id="1_b2dse"]
+
+[node name="WatertowerNode" instance=ExtResource("1_b2dse")]
+
+[node name="StaticBody3D" parent="watertower" index="0"]
+collision_layer = 2

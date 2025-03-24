@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://md60r21nm4w2"]
+
+[ext_resource type="PackedScene" uid="uid://bkrnhngq7rxk5" path="res://assets/gltf/gltf/terrain_mining.gltf" id="1_0hwyx"]
+
+[node name="TerrainMining" instance=ExtResource("1_0hwyx")]

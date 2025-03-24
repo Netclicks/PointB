@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://kvebkk4jf4lx"]
+
+[ext_resource type="PackedScene" uid="uid://b1m10mijqdaoj" path="res://assets/gltf/car_hatchback.gltf" id="1_4rk23"]
+[ext_resource type="PackedScene" uid="uid://bp46up08l4qev" path="res://scenes/headlight.tscn" id="2_jy78m"]
+
+[node name="Car1Node" instance=ExtResource("1_4rk23")]
+
+[node name="StaticBody3D" parent="car_hatchback" index="4"]
+collision_layer = 2
+
+[node name="Headlight" parent="." index="1" instance=ExtResource("2_jy78m")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.1, 0, 0.455)
+light_indirect_energy = 1.97
+
+[node name="Headlight2" parent="." index="2" instance=ExtResource("2_jy78m")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.1, 0, 0.456)

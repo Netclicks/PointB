@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dboajwjti5yni"]
+
+[ext_resource type="PackedScene" uid="uid://dtucm51ujqi0j" path="res://assets/gltf/road_straight_crossing.gltf" id="1_7pdl6"]
+
+[node name="road_straight_crossing2" instance=ExtResource("1_7pdl6")]
+
+[node name="road_straight_crossing" parent="." index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

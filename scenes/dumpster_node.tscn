@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b37m5dbsqdlb2"]
+
+[ext_resource type="PackedScene" uid="uid://b73ltpesihpaq" path="res://assets/gltf/dumpster.gltf" id="1_62l18"]
+
+[node name="DumpsterNode" instance=ExtResource("1_62l18")]
+
+[node name="StaticBody3D" parent="dumpster" index="0"]
+collision_layer = 2

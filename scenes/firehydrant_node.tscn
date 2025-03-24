@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://w558nlrf3qi5"]
+
+[ext_resource type="PackedScene" uid="uid://b4lbluxswx54c" path="res://assets/gltf/firehydrant.gltf" id="1_smkcb"]
+
+[node name="FirehydrantNode" instance=ExtResource("1_smkcb")]
+
+[node name="StaticBody3D" parent="firehydrant" index="0"]
+collision_layer = 2

@@ -1,0 +1,38 @@
+[gd_scene load_steps=15 format=3 uid="uid://dwxbdyw3w3vtl"]
+
+[ext_resource type="Script" path="res://road_manager.gd" id="1_nsloq"]
+[ext_resource type="PackedScene" uid="uid://dvb4u560fgqpg" path="res://scenes/road_segment.tscn" id="2_6v7xf"]
+[ext_resource type="PackedScene" uid="uid://shw0i0usqmaq" path="res://scenes/car_5_node.tscn" id="3_hx8dd"]
+[ext_resource type="PackedScene" uid="uid://cmdgwdarvrgey" path="res://scenes/bush_node.tscn" id="4_8oahy"]
+[ext_resource type="PackedScene" uid="uid://kvebkk4jf4lx" path="res://scenes/car_1_node.tscn" id="5_jgdv4"]
+[ext_resource type="PackedScene" uid="uid://dyvqgrmftitnb" path="res://scenes/car_2_node.tscn" id="6_k74un"]
+[ext_resource type="PackedScene" uid="uid://b1t0w555wj8l2" path="res://scenes/car_3_node.tscn" id="7_0apwk"]
+[ext_resource type="PackedScene" uid="uid://phj0mxpbpwip" path="res://scenes/car_4_node.tscn" id="8_lt28f"]
+[ext_resource type="PackedScene" uid="uid://b37m5dbsqdlb2" path="res://scenes/dumpster_node.tscn" id="9_sgwy3"]
+[ext_resource type="PackedScene" uid="uid://w558nlrf3qi5" path="res://scenes/firehydrant_node.tscn" id="10_yqron"]
+[ext_resource type="PackedScene" uid="uid://c5omlinwd825s" path="res://scenes/traffic_1_node.tscn" id="11_5llqu"]
+[ext_resource type="PackedScene" uid="uid://cuvt1jatocdu7" path="res://scenes/traffic_2.tscn" id="12_gl0vg"]
+[ext_resource type="PackedScene" uid="uid://d0bpcve1gqgxw" path="res://scenes/traffic_3_node.tscn" id="13_3notn"]
+[ext_resource type="PackedScene" uid="uid://m2rqh8y8fot7" path="res://scenes/watertower_node.tscn" id="14_xw645"]
+
+[node name="RoadManager" type="Node3D" groups=["debris"]]
+script = ExtResource("1_nsloq")
+road_scene = ExtResource("2_6v7xf")
+car5_scene = ExtResource("3_hx8dd")
+bush_scene = ExtResource("4_8oahy")
+car1_scene = ExtResource("5_jgdv4")
+car2_scene = ExtResource("6_k74un")
+car3_scene = ExtResource("7_0apwk")
+car4_scene = ExtResource("8_lt28f")
+dumpster_scene = ExtResource("9_sgwy3")
+red_scene = ExtResource("10_yqron")
+traffic1_scene = ExtResource("11_5llqu")
+traffic2_scene = ExtResource("12_gl0vg")
+traffic3_scene = ExtResource("13_3notn")
+watertower_scene = ExtResource("14_xw645")
+max_speed = 22
+start_brightness = 4
+num_segments = 10
+start_speed = 10.0
+debris_ceiling = 25
+enemy_car = 5

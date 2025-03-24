@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1t0w555wj8l2"]
+
+[ext_resource type="PackedScene" uid="uid://bmegf6muh3rpf" path="res://assets/gltf/car_stationwagon.gltf" id="1_h3gvd"]
+[ext_resource type="PackedScene" uid="uid://bp46up08l4qev" path="res://scenes/headlight.tscn" id="2_48wsp"]
+
+[node name="Car3Node" instance=ExtResource("1_h3gvd")]
+
+[node name="StaticBody3D" parent="car_stationwagon" index="4"]
+collision_layer = 2
+
+[node name="Headlight" parent="." index="1" instance=ExtResource("2_48wsp")]
+
+[node name="Headlight2" parent="." index="2" instance=ExtResource("2_48wsp")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.1, 0.2, 0.455)

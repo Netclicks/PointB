@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://l7jl8no5cuet"]
+
+[ext_resource type="PackedScene" uid="uid://cw0u2cf1j0fje" path="res://assets/gltf/building_A_withoutBase.gltf" id="1_ip05g"]
+[ext_resource type="PackedScene" uid="uid://bp46up08l4qev" path="res://scenes/headlight.tscn" id="2_m0a2o"]
+
+[node name="Building1Node" instance=ExtResource("1_ip05g")]
+
+[node name="Headlight" parent="." index="1" instance=ExtResource("2_m0a2o")]
+transform = Transform3D(-1, -3.24504e-15, -8.74228e-08, 4.38316e-08, -0.86523, -0.501375, -7.56408e-08, -0.501375, 0.86523, 0.1, 0.2, 1.85312)

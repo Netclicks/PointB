@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmdgwdarvrgey"]
+
+[ext_resource type="PackedScene" uid="uid://c50r7uctya26s" path="res://assets/gltf/bush.gltf" id="1_iskmx"]
+
+[node name="BushNode" instance=ExtResource("1_iskmx")]
+
+[node name="StaticBody3D" parent="bush" index="0"]
+collision_layer = 2

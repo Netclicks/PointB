@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5omlinwd825s"]
+
+[ext_resource type="PackedScene" uid="uid://bpv8pv182ag0t" path="res://assets/gltf/trafficlight_A.gltf" id="1_k73ns"]
+[ext_resource type="PackedScene" uid="uid://bp46up08l4qev" path="res://scenes/headlight.tscn" id="2_fa2ew"]
+
+[node name="Traffic1Node" instance=ExtResource("1_k73ns")]
+
+[node name="StaticBody3D" parent="trafficlight_A" index="0"]
+collision_layer = 2
+
+[node name="Headlight" parent="." index="1" instance=ExtResource("2_fa2ew")]
+transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 0.1, 0.948765, 0.0192347)

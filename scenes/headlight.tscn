@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bp46up08l4qev"]
+
+[node name="Headlight" type="SpotLight3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.1, 0.2, 0.455)
+light_energy = 1.646
+spot_range = 6.92888

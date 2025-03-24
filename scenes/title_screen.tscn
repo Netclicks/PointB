@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck8svvil0p0bv"]
+
+[ext_resource type="Script" path="res://title_screen.gd" id="1_rt8p5"]
+[ext_resource type="PackedScene" uid="uid://cnkmw63nj2yxw" path="res://scenes/sample.tscn" id="4_s8s6k"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rt8p5")
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.065
+anchor_bottom = 0.171
+offset_left = 212.0
+offset_top = 478.0
+offset_right = 265.12
+offset_bottom = 495.192
+text = "Start"
+
+[node name="Credits" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.065
+anchor_bottom = 0.171
+offset_left = 501.0
+offset_top = 547.0
+offset_right = 554.12
+offset_bottom = 494.192
+text = "Credits"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 756.0
+offset_top = 482.0
+offset_right = 884.0
+offset_bottom = 610.0
+text = "Quit
+"
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 507.0
+offset_top = 107.0
+offset_right = 635.0
+offset_bottom = 235.0
+text = "Point B
+"
+
+[node name="Sample" parent="." instance=ExtResource("4_s8s6k")]
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

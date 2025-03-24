@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://bpwbolb1y1c88"]
+
+[ext_resource type="Script" path="res://main_scene.gd" id="1_2n4qa"]
+[ext_resource type="PackedScene" uid="uid://dwxbdyw3w3vtl" path="res://scenes/road_manager.tscn" id="3_co5us"]
+[ext_resource type="PackedScene" uid="uid://c1kuvycngsn01" path="res://scenes/player.tscn" id="4_ejkuv"]
+[ext_resource type="PackedScene" uid="uid://bik7e70wrrhhb" path="res://scenes/scenery_manager.tscn" id="4_xbjvi"]
+[ext_resource type="PackedScene" uid="uid://cydrbgaf62y1h" path="res://scenes/terrain_low.tscn" id="5_4rdxb"]
+[ext_resource type="PackedScene" uid="uid://c2qmajhr6xqgp" path="res://scenes/world_environment.tscn" id="6_wc7u7"]
+[ext_resource type="Script" path="res://scenes/control.gd" id="7_wctgn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d7piv"]
+line_spacing = 15.0
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_yu5av"]
+line_spacing = 15.0
+font_size = 40
+shadow_size = 6
+
+[node name="MainScene" type="Node3D"]
+script = ExtResource("1_2n4qa")
+
+[node name="RoadManager" parent="." instance=ExtResource("3_co5us")]
+max_speed = 20
+sun_speed = 0.1
+
+[node name="player" parent="." instance=ExtResource("4_ejkuv")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+rotation_order = 0
+
+[node name="SceneryManager" parent="." instance=ExtResource("4_xbjvi")]
+
+[node name="Floor" parent="." instance=ExtResource("5_4rdxb")]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 0, 0)
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("6_wc7u7")]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_wctgn")
+
+[node name="SpeedLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_d7piv")
+uppercase = true
+
+[node name="LifeLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_yu5av")
+horizontal_alignment = 2

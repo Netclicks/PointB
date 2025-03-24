@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgbxnrlcqgoac"]
+
+[ext_resource type="PackedScene" uid="uid://0rnyed3351jq" path="res://assets/gltf/bench.gltf" id="1_pfs7n"]
+
+[node name="BenchNode" instance=ExtResource("1_pfs7n")]
+
+[node name="StaticBody3D" parent="bench" index="0"]
+collision_layer = 2

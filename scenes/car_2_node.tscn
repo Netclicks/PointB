@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyvqgrmftitnb"]
+
+[ext_resource type="PackedScene" uid="uid://c7ty0fm55mwnq" path="res://assets/gltf/car_sedan.gltf" id="1_1fcl0"]
+[ext_resource type="PackedScene" uid="uid://bp46up08l4qev" path="res://scenes/headlight.tscn" id="2_ppt02"]
+
+[node name="Car2Node" instance=ExtResource("1_1fcl0")]
+
+[node name="StaticBody3D" parent="car_sedan" index="4"]
+collision_layer = 2
+
+[node name="Headlight" parent="." index="1" instance=ExtResource("2_ppt02")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.1, 0.1, 0.455)
+
+[node name="Headlight2" parent="." index="2" instance=ExtResource("2_ppt02")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.1, 0.1, 0.455)
