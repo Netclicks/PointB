@@ -1,7 +1,17 @@
-# Godot 4+ specific ignores
-.import/
-.godot/
-/android/
-.mono/
-.cache/
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Godot export temp files
+export_presets.cfg
+
+# Ignore build cache and temp files
+*.import
 *.log
+*.tmp
+
+# Exclude the Godot editor settings (user-specific)
+.editor_settings-*
+
+# Ignore unnecessary Godot folders
+.godot/

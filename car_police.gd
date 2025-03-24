@@ -16,6 +16,10 @@ var flash_timer = 0.0
 var toggle = true
 
 func _physics_process(delta: float) -> void:
+	if not AudioPlayer.background_music_path.playing:
+		AudioPlayer.play_background_music()
+	if not AudioPlayer.siren_path.playing:
+		AudioPlayer.play_siren()
 	if global_transform.origin.y < -5:
 		var death_screen = death_screen_scene.instantiate()
 		get_tree().current_scene.add_child(death_screen)
@@ -70,3 +74,5 @@ func get_life():
 	
 func set_move_false():
 	can_move = false
+func check_move():
+	return can_move

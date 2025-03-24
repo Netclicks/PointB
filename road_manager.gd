@@ -14,7 +14,7 @@ class_name Road extends Node3D
 @export var traffic3_scene: PackedScene
 @export var watertower_scene: PackedScene
 @export var max_speed: int = 30
-
+@onready var player = get_node_or_null("/root/MainScene/player/car_police")
 @onready var world_env = get_node("/root/MainScene/WorldEnvironment")
 @onready var sky_material = world_env.environment.sky.sky_material
 @export var sun_speed = 0.01
@@ -71,7 +71,7 @@ func _process(delta):
 	if road_speed < max_speed:
 		#gradually change road speed 
 		road_speed += .001 
-	if is_equal_approx(road_speed, max_speed):
+	if (is_equal_approx(road_speed, max_speed)) and (player.check_move() == true):
 		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 	
 	for segment in road_segments:

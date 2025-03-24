@@ -1,4 +1,4 @@
-extends Node
+extends AudioStreamPlayer3D
 @onready var background_music_path = $BackgroundSound
 @onready var siren_path = $SirenSound
 @onready var horn_path = $HornSound
@@ -11,11 +11,9 @@ func _ready() -> void:
 	horn_path.volume_db = 50
 	crash_path.volume_db = 50
 func play_background_music():
-	if not background_music_path.playing:
-		background_music_path.play()
+	background_music_path.play()
 func play_siren():
-	if not siren_path.playing:
-		siren_path.play()
+	siren_path.play()
 func play_crash():
 	if not crash_path.playing:
 		crash_path.play()
@@ -26,3 +24,7 @@ func play_horn():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+func get_back_bool():
+	return background_music_path.playing
+func get_siren_bool():
+	return siren_path.playing

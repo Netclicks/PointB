@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dprjmbr6vwcbu" path="res://assets/sound/car_horn.wav" id="4_r4utu"]
 [ext_resource type="AudioStream" uid="uid://bahciu344cnqr" path="res://assets/sound/siren.mp3" id="5_mrf2y"]
 
-[node name="AudioPlayer" type="Node"]
+[node name="AudioPlayer" type="AudioStreamPlayer3D"]
 script = ExtResource("1_05xtn")
 
 [node name="BackgroundSound" type="AudioStreamPlayer3D" parent="."]
