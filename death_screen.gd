@@ -1,5 +1,5 @@
 extends CanvasLayer
-@onready var player_move = get_node("/root/MainScene/Player/car_police")
+#@onready var player_move = get_node("/root/MainScene/Player/car_police")
 func _ready() -> void:
 
 	visible = false
@@ -21,7 +21,7 @@ func _ready() -> void:
 	quit.text = "Quit"
 	quit.custom_minimum_size = Vector2(100, 25)
 
-	quit.connect("pressed", Callable(self, "_on_quit_button_pressed"))
+	#quit.connect("pressed", Callable(self, "_on_quit_button_pressed"))
 	button.connect("pressed", Callable(self, "_on_retry_button_pressed"))
 	
 	vbox.position = Vector2(175, 100)

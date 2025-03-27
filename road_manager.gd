@@ -61,7 +61,8 @@ func add_road_segment(z_position):
 	
 
 func _process(delta):
-	
+	if player.check_move() == false:
+		return
 	if world_env and world_env.environment:
 		
 		if sky_material is ProceduralSkyMaterial:

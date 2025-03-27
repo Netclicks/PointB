@@ -22,6 +22,7 @@ extends Node3D
 @export var distance: float = 3.5 # Distance between scenery segments
 @export var variance: float = .5 # Variance of of spawn position 
 @export var scenery_ceiling: int = 10
+@onready var player = get_node_or_null("/root/MainScene/player/car_police")
 
 var current_scenery = []
 
@@ -33,7 +34,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
+	if player.check_move() == false:
+		return
 	for segment in current_scenery:
 		segment.position.z += road_manager.road_speed * delta  # Move scenes toward the player	
 	# prevents crash on no scenery	
