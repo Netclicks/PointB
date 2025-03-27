@@ -1,4 +1,4 @@
-Game README
+PointB README
 
 License & Credits
 
